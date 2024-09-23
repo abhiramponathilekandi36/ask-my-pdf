@@ -45,7 +45,11 @@ export const appRouter = router({
   getFileMessages: privateProcedure
     .input(
       z.object({
-        limit: z.number().min(1).max(100).nullish(),
+        limit: z
+          .number()
+          .min(1)
+          .max(100)
+          .nullish(),
         cursor: z.string().nullish(),
         fileId: z.string(),
       })
@@ -144,6 +148,12 @@ export const appRouter = router({
           id: input.id,
         },
       });
+
+      // await db.message.delete({
+      //   where: {
+      //     fileId: "cm1ff2z0q000flil4g5e2xne9",
+      //   },
+      // });
 
       await utapi.deleteFiles(file.key);
 

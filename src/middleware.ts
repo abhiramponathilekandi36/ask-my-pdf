@@ -4,6 +4,7 @@ export default function middleware(req: Response) {
     isReturnToCurrentPage: true,
   });
 }
+
 export const config = {
   matcher: ["/dashboard/:path*", "/auth-callback"],
 };

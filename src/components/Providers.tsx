@@ -9,9 +9,7 @@ const Providers = ({ children }: PropsWithChildren) => {
   const [queryClient] = useState(() => new QueryClient());
   const [trpcClient] = useState(() =>
     trpc.createClient({
-      links: [
-        httpBatchLink({ url: "https://ask-my-pdf-three.vercel.app/api/trpc" }),
-      ],
+      links: [httpBatchLink({ url: "http://localhost:3000/api/trpc" })],
     })
   );
 

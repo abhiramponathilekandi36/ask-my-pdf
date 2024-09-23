@@ -59,7 +59,7 @@ const UploadDropzone = () => {
 
         if (!res) {
           return toast({
-            title: "Soemthing went wrong",
+            title: "Something went wrong",
             description: "Please try again later",
             variant: "destructive",
           });
@@ -84,7 +84,7 @@ const UploadDropzone = () => {
         startPolling({ key });
       }}
     >
-      {({ getRootProps, getInputProps, acceptedFiles }) => (
+      {({ getRootProps, acceptedFiles }) => (
         <div
           {...getRootProps()}
           className="border h-64 m-4 border-dashed border-gray-300 rounded-lg"
@@ -130,12 +130,14 @@ const UploadDropzone = () => {
                   ) : null}
                 </div>
               ) : null}
-              <input
-                {...getInputProps()}
+              {/* <Input
                 type="file"
+                {...getInputProps()}
                 id="dropzone-file"
                 className="hidden"
-              />
+                onClick={(e) => e.stopPropagation()}
+              /> */}
+              <></>
             </label>
           </div>
         </div>
