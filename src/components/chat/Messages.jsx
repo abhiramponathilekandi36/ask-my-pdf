@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+
 import { trpc } from "@/app/_trpc/client";
 import { INFINITE_QUERY_LIMIT } from "@/config/infinite-query";
 import { Loader2, MessageSquare } from "lucide-react";
@@ -7,24 +9,27 @@ import { useContext, useEffect, useRef } from "react";
 import { ChatContext } from "./ChatContext";
 import { useIntersection } from "@mantine/hooks";
 
-interface MessagesProps {
-  fileId: string;
-}
+// interface MessagesProps {
+//   fileId: string;
+// }
 
-const Messages = ({ fileId }: MessagesProps) => {
+const Messages = ({ fileId }) => {
   const { isLoading: isAiThinking } = useContext(ChatContext);
 
-  const { data, isLoading, fetchNextPage } =
-    trpc.getFileMessages.useInfiniteQuery(
-      {
-        fileId,
-        limit: INFINITE_QUERY_LIMIT,
-      },
-      {
-        getNextPageParam: (lastPage) => lastPage?.nextCursor,
-        keepPreviousData: true,
-      }
-    );
+  const {
+    data,
+    isLoading,
+    fetchNextPage,
+  } = trpc.getFileMessages.useInfiniteQuery(
+    {
+      fileId,
+      limit: INFINITE_QUERY_LIMIT,
+    },
+    {
+      getNextPageParam: (lastPage) => lastPage?.nextCursor,
+      keepPreviousData: true,
+    }
+  );
 
   const messages = data?.pages.flatMap((page) => page.messages);
 
@@ -44,7 +49,7 @@ const Messages = ({ fileId }: MessagesProps) => {
     ...(messages ?? []),
   ];
 
-  const lastMessageRef = useRef<HTMLDivElement>(null);
+  const lastMessageRef = useRef < HTMLDivElement > null;
 
   const { ref, entry } = useIntersection({
     root: lastMessageRef.current,
