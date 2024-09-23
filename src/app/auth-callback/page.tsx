@@ -11,9 +11,7 @@ const Page = () => {
   const searchParams = useSearchParams();
   const origin = searchParams.get("origin");
 
-  const { data, error, isLoading, isSuccess } = trpc.authCallback.useQuery(
-    undefined
-  );
+  const { data, error, isLoading, isSuccess } = trpc.authCallback.useQuery();
 
   // console.log(error, "error");
   // console.log(data, "data");
