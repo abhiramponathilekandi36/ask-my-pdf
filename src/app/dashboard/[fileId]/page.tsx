@@ -10,7 +10,7 @@ interface PageProps {
   };
 }
 
-export const metdata = {
+export const metadata = {
   title: "Chat",
 };
 
