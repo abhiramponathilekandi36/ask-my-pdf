@@ -84,7 +84,7 @@ const UploadDropzone = () => {
         startPolling({ key });
       }}
     >
-      {({ getRootProps, acceptedFiles }) => (
+      {({ getRootProps, getInputProps, acceptedFiles }) => (
         <div
           {...getRootProps()}
           className="border h-64 m-4 border-dashed border-gray-300 rounded-lg"
@@ -130,14 +130,13 @@ const UploadDropzone = () => {
                   ) : null}
                 </div>
               ) : null}
-              {/* <Input
+              <input
                 type="file"
                 {...getInputProps()}
                 id="dropzone-file"
                 className="hidden"
                 onClick={(e) => e.stopPropagation()}
-              /> */}
-              <></>
+              />
             </label>
           </div>
         </div>

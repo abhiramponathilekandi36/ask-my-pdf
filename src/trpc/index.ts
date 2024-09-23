@@ -143,17 +143,19 @@ export const appRouter = router({
 
       if (!file) throw new TRPCError({ code: "NOT_FOUND" });
 
+      await db.message.deleteMany({
+        where: {
+          fileId: {
+            contains: file.id,
+          },
+        },
+      });
+
       await db.file.delete({
         where: {
           id: input.id,
         },
       });
-
-      // await db.message.delete({
-      //   where: {
-      //     fileId: "cm1ff2z0q000flil4g5e2xne9",
-      //   },
-      // });
 
       await utapi.deleteFiles(file.key);
 
