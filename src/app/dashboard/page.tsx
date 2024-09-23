@@ -18,6 +18,7 @@ const Page = async () => {
       id: user.id,
     },
   });
+  console.log(dbUser);
 
   if (!dbUser) redirect("/auth-callback?origin=dashboard");
 
