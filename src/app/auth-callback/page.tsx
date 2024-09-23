@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { trpc } from "../_trpc/client";
 import { Loader2 } from "lucide-react";
 import { Suspense, useEffect } from "react";
@@ -8,8 +8,7 @@ import { Suspense, useEffect } from "react";
 const Page = () => {
   const router = useRouter();
 
-  const searchParams = useSearchParams();
-  const origin = searchParams.get("origin");
+  const origin = "dashboard";
 
   const { data, error, isLoading, isSuccess } = trpc.authCallback.useQuery();
 
