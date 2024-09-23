@@ -50,9 +50,9 @@ export default function Home() {
               <div className="mt-16 flow-root sm:mt-24">
                 <div className="-m-2 rounded-xl bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
                   <Image
-                    src={"/dashboard-preview.jpg"}
-                    width={1364}
-                    height={866}
+                    src={"/dashboard-preview.png"}
+                    width={1729}
+                    height={833}
                     alt="product-review"
                     quality={100}
                     className="rounded-md bg-white p-2 sm:p-8 md:p-20 shadow-2xl ring-1 ring-gray-900/50"
@@ -100,14 +100,8 @@ export default function Home() {
                 Sign up for an account
               </span>
               <span className="mt-2 text-zinc-700">
-                Either start out with a free plan or choose our{" "}
-                <Link
-                  href={"/pricing"}
-                  className="text-red-700 underline underline-offset-2"
-                >
-                  pro plan
-                </Link>
-                .
+                Start by sigining up. Per person get&apos;s access to 2 PDF
+                chats
               </span>
             </div>
           </li>
@@ -143,9 +137,9 @@ export default function Home() {
           <div className="mt-16 flow-root sm:mt-24">
             <div className="-m-2 rounded-xl bg-gray-900/5 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
               <Image
-                src={"/file-upload-preview.jpg"}
-                width={1419}
-                height={732}
+                src={"/file-upload-preview.png"}
+                width={1577}
+                height={709}
                 alt="uploading-preview"
                 quality={100}
                 className="rounded-md bg-white p-2 sm:p-8 md:p-20 shadow-2xl ring-1 ring-gray-900/50"
