@@ -91,7 +91,7 @@ const UploadDropzone = () => {
         >
           <div className="flex items-center justify-center h-full w-full">
             <label
-              htmlFor="dropzone-file"
+              // htmlFor="dropzone-file"
               className=" hidden md:flex flex-col items-center justify-center w-full h-full rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
             >
               <div className="flex flex-col items-center justify-center pt-5 pb-6">
@@ -130,16 +130,9 @@ const UploadDropzone = () => {
                   ) : null}
                 </div>
               ) : null}
-               </label>
-            <div className="flex flex-col items-center justify-center bg-gray-50 text-zinc-700 hover:bg-gray-100 h-full md:hidden">Tap here for mobile platform!</div>
-              <input
-                type="file"
-                {...getInputProps()}
-                id="dropzone-file"
-                
-              
-              />
-           
+            </label>
+            {/* <div className="flex flex-col items-center justify-center bg-gray-50 text-zinc-700 hover:bg-gray-100 h-full md:hidden">Tap here for mobile platform!</div> */}
+            <input type="file" {...getInputProps()} id="dropzone-file" />
           </div>
         </div>
       )}
