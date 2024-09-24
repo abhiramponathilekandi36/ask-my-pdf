@@ -134,7 +134,7 @@ const UploadDropzone = () => {
                 type="file"
                 {...getInputProps()}
                 id="dropzone-file"
-                className=""
+                
                 onClick={(e) => e.stopPropagation()}
               />
             </label>
