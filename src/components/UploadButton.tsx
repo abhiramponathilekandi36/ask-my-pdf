@@ -87,7 +87,7 @@ const UploadDropzone = () => {
       {({ getRootProps, getInputProps, acceptedFiles }) => (
         <div
           {...getRootProps()}
-          className="border h-64 m-4 border-dashed border-gray-300 rounded-lg"
+          className="hidden md:block border h-64 m-4 border-dashed border-gray-300 rounded-lg"
         >
           <div className="flex items-center justify-center h-full w-full">
             <label
@@ -131,7 +131,7 @@ const UploadDropzone = () => {
                 </div>
               ) : null}
                </label>
-            <div className="flex flex-col items-center justify-center bg-gray-50 hover:bg-gray-100 h-full md:hidden">Tap here for mobile platform!</div>
+            <div className="flex flex-col items-center justify-center bg-gray-50 text-zinc-700 hover:bg-gray-100 h-full md:hidden">Tap here for mobile platform!</div>
               <input
                 type="file"
                 {...getInputProps()}
