@@ -131,7 +131,7 @@ const UploadDropzone = () => {
                 </div>
               ) : null}
                </label>
-            <div className="bg-zinc-200 md:hidden">Tap here for mobile platform!</div>
+            <div className="bg-gray-50 h-full md:hidden">Tap here for mobile platform!</div>
               <input
                 type="file"
                 {...getInputProps()}
