@@ -131,7 +131,7 @@ const UploadDropzone = () => {
                 </div>
               ) : null}
                </label>
-            
+            <div className="hidden">Sapce to fix a mobile platform bug</div>
               <input
                 type="file"
                 {...getInputProps()}
