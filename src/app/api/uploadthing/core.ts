@@ -14,7 +14,7 @@ const f = createUploadthing();
 export const utapi = new UTApi();
 
 export const ourFileRouter = {
-  pdfUploader: f({ pdf: { maxFileSize: "4MB" } })
+  pdfUploader: f({ pdf: { maxFileSize: "100MB" } })
     .middleware(async () => {
       const { getUser } = getKindeServerSession();
       const user = await getUser();
